@@ -1,5 +1,5 @@
 ---
-title: "next.jsチュートリアル"
+title: "next.jsチュートリアルgit"
 date: "2020-12-21"
 ---
 
