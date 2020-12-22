@@ -3,9 +3,68 @@ title: "next.jsチュートリアル"
 date: "2020-12-21"
 ---
 
-Next.js has two forms of pre-rendering: **Static Generation** and **Server-side Rendering**. The difference is in **when** it generates the HTML for a page.
+# `<Link href="/"></Link>`
 
-- **Static Generation** is the pre-rendering method that generates the HTML at **build time**. The pre-rendered HTML is then _reused_ on each request.
-- **Server-side Rendering** is the pre-rendering method that generates the HTML on **each request**.
+a タグをラップしたもの。ページ間の移動
 
-Importantly, Next.js lets you **choose** which pre-rendering form to use for each page. You can create a "hybrid" Next.js app by using Static Generation for most pages and using Server-side Rendering for others.
+コンポーネントは必ず`default`エクスポート
+
+`pages`ディレクトリ配下のファイルがルーティングになる
+
+# メタデータの変更
+
+```javascript
+import Head from "next/head";
+
+export default function FirstPost() {
+  return (
+    <>
+      <Head>
+        <title>create next app</title>
+        <link rel="icon" href="/favicon" />
+      </Head>
+    </>
+  );
+}
+```
+
+# layout コンポーネント(共通)
+
+- `components`という名前のディレクトリをトップレベルに作成
+- その中に`layout.js`を作成
+
+```javascript
+function Layout({ children }) {
+  return <div>{children}</div>;
+}
+
+export default Layout;
+```
+
+`pages/posts/first-post.js`
+
+```javascript
+import Head from "next/head";
+import Link from "next/link";
+import Layout from "../../components/layout";
+
+export default function FirstPost() {
+  return (
+    <Layout>
+      <Head>
+        <title>First Post</title>
+      </Head>
+      <h1>First Post</h1>
+      <h2>
+        <Link href="/">
+          <a>Back to home</a>
+        </Link>
+      </h2>
+    </Layout>
+  );
+}
+```
+
+## 全てのページ共通`_app.js`
+
+`pages`の直下

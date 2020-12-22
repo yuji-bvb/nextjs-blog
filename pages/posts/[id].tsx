@@ -3,27 +3,37 @@ import { getAllPostIds, getPostData } from "../../lib/posts";
 import Head from "next/head";
 import Date from "../../components/date";
 import utilStyles from "../../styles/utils.module.css";
+import { GetStaticProps, GetStaticPaths } from "next";
 
 // サーバーサイド内で動いている
-export async function getStaticProps({ params }) {
-  const postData = await getPostData(params.id);
+export const getStaticProps: GetStaticProps = async ({ params }) => {
+  const postData = await getPostData(params.id as string);
   return {
     props: {
       postData,
     },
   };
-}
+};
 
 // サーバーサイド内で動いている
-export async function getStaticPaths() {
-  const paths = getAllPostIds();
+export const getStaticPaths: GetStaticPaths = async () => {
+  const paths = await getAllPostIds();
   return {
     paths,
-    fallback: false, //指定以外のpathが来た場合の処理falseの場合は404を返す
+    //指定以外のpathが来た場合の処理falseの場合は404を返す
+    fallback: false,
   };
-}
+};
 
-export default function Post({ postData }) {
+export default function Post({
+  postData,
+}: {
+  postData: {
+    title: string;
+    date: string;
+    contentHtml: string;
+  };
+}) {
   return (
     <Layout>
       <Head>
