@@ -32,7 +32,7 @@ date: "2020-12-10"
 
 `[リンク]url 表記で変数のような使いかた`
 
-[ポートフォリオ](https://favoroadbike.com)
+[ポートフォリオ](https://favoroadbike.com){:target="\_blank"}
 
 [favoroadbike]ポートフォリオ
 
