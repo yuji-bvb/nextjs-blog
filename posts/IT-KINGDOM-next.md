@@ -32,7 +32,7 @@ date: "2020-12-27"
 
 ## css
 
-- <style jsx> css in js
+- style jsx css in js
 - css モジュール
   - import **styles** でなく **classes** の方が名前的に良いのでは？
 - css も必要な分だけ読み込まれる
