@@ -5,6 +5,7 @@ import utilStyles from "../styles/utils.module.css";
 import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
+import { Header } from "../components/header";
 
 //ビルドされるときに呼ばれる、データをとってコンポーネントに渡す
 export const getStaticProps: GetStaticProps = async () => {
@@ -30,14 +31,19 @@ export default function Home({ allPostsData }: Props) {
       <Head>
         <title>{siteTitle}</title>
       </Head>
+      <Header />
       <section className={utilStyles.headingMd}>
-        <p>
-          ユージです。プログラミング学習中です。React,Next.js頑張っています！
-        </p>
-        <p>
-          (This is a sample website - you’ll be building a site like this on{" "}
-          <a href="https://nextjs.org/learn">our Next.js tutorial</a>.)
-        </p>
+        <p>プログラミング学習中!Next.js頑張ってます！</p>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={"https://favoroadbike.com/"}
+        >
+          ポートフォリオ
+        </a>
+        <a rel="noopener noreferrer" href={"https://github.com/yuji-bvb"}>
+          GitHub
+        </a>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>

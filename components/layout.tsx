@@ -2,10 +2,10 @@ import Head from "next/head";
 import styles from "./layout.module.css";
 import utilStyles from "../styles/utils.module.css";
 import Link from "next/link";
+import { useTheme } from "next-themes";
 
-const name = "Yuji";
-export const siteTitle = "Next.js Yuji Website";
-
+const name = "YUJI";
+export const siteTitle = "Yuji's Website";
 export default function Layout({
   children,
   home,
@@ -13,6 +13,7 @@ export default function Layout({
   children: React.ReactNode;
   home?: boolean;
 }) {
+  const { theme, setTheme } = useTheme();
   return (
     <div className={styles.container}>
       <Head>
@@ -31,6 +32,15 @@ export default function Layout({
         <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
+        <div>
+          {theme !== undefined && (
+            <select value={theme} onChange={(e) => setTheme(e.target.value)}>
+              <option value="dark">Dark</option>
+              <option value="light">Light</option>
+              <option value="system">System</option>
+            </select>
+          )}
+        </div>
         {home ? (
           <>
             <img

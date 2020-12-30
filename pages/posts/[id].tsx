@@ -15,7 +15,8 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
   };
 };
 
-// サーバーサイド内で動いている
+// サーバーサイド内で動いている。IDが取りうる値を取得、動的なページはこれがないとできない
+//
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = await getAllPostIds();
   return {
