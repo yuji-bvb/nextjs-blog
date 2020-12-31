@@ -35,9 +35,8 @@ export default function Layout({
         <div>
           {theme !== undefined && (
             <select value={theme} onChange={(e) => setTheme(e.target.value)}>
-              <option value="dark">Dark</option>
-              <option value="light">Light</option>
-              <option value="system">System</option>
+              <option value="dark">🌛</option>
+              <option value="light">🌞</option>
             </select>
           )}
         </div>
