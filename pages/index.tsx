@@ -6,6 +6,7 @@ import { getSortedPostsData } from "../lib/posts";
 import Link from "next/link";
 import Date from "../components/date";
 import { Header } from "../components/header";
+import { Footer } from "../components/footer";
 
 //ビルドされるときに呼ばれる、データをとってコンポーネントに渡す
 export const getStaticProps: GetStaticProps = async () => {
@@ -33,7 +34,7 @@ export default function Home({ allPostsData }: Props) {
       </Head>
       <Header />
       <section className={utilStyles.headingMd}>
-        <p>プログラミング学習中!Next.js頑張ってます！</p>
+        <p>プログラミング学習中！Next.js頑張ってます！</p>
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -61,6 +62,7 @@ export default function Home({ allPostsData }: Props) {
           ))}
         </ul>
       </section>
+      <Footer />
     </Layout>
   );
 }
