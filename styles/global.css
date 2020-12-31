@@ -17,7 +17,7 @@ body {
 
 a {
   color: var(--fg);
-  text-decoration: none;
+  /* text-decoration: none; */
   margin-right: 5px;
 }
 
@@ -37,20 +37,19 @@ img {
 
 [data-theme="dark"] {
   --fg: #fff;
-  --bg: #000;
+  --bg: rgb(54, 52, 52);
 }
 
 select {
-  font-size: 24px;
+  font-size: 40px;
   border: none;
   position: absolute;
   right: 5px;
   top: 10px;
+  background-color: transparent;
 }
 
-li {
-  list-style: none;
-}
 h1 {
   margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
