@@ -1,3 +1,4 @@
+//node.jsの内容
 import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
@@ -6,6 +7,7 @@ import html from "remark-html";
 // import fetch from "node-fetch";
 // const base64 = require("js-base64").Base64;
 
+//postsを取得
 const postsDirectory = path.join(process.cwd(), "posts");
 
 export function getSortedPostsData() {
@@ -17,6 +19,7 @@ export function getSortedPostsData() {
 
     // マークダウンファイルを解析
     const fullPath = path.join(postsDirectory, fileName);
+    //ファイルの中身を取得
     const fileContents = fs.readFileSync(fullPath, "utf8");
 
     // 投稿のメタデータ解析のためにgray-matterを使う
