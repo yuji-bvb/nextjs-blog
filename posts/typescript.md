@@ -3,6 +3,8 @@ title: "TypeScript導入"
 date: "2020-12-22"
 ---
 
+---
+
 ## TypeScript
 
 - コンパイラ(変換装置)を使う
