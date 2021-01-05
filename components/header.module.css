@@ -5,7 +5,13 @@
   left: 20px;
 }
 
-@media (max-width: 1024px) {
+@media (max-width: 1250px) {
+  .container {
+    position: absolute;
+  }
+}
+
+@media (max-width: 540px) {
   .container {
     display: none;
   }
