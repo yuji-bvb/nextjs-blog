@@ -24,6 +24,9 @@
   font-size: 1.2rem;
   line-height: 1.5;
 }
+.headingMd > a {
+  font-weight: bold;
+}
 
 .borderCircle {
   border-radius: 9999px;

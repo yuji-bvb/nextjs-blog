@@ -16,8 +16,9 @@
 }
 
 .headerHomeImage {
-  width: 8rem;
-  height: 8rem;
+  cursor: pointer;
+  width: 7rem;
+  height: 9rem;
 }
 
 .backToHome {
