@@ -8,7 +8,6 @@ import Date from "../components/date";
 import { Header } from "../components/header";
 import { Footer } from "../components/footer";
 
-//ビルドされるときに呼ばれる、データをとってコンポーネントに渡す
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData();
   return {
@@ -42,9 +41,14 @@ export default function Home({ allPostsData }: Props) {
         >
           ポートフォリオ
         </a>
+        &nbsp;
         <a rel="noopener noreferrer" href={"https://github.com/yuji-bvb"}>
           GitHub
         </a>
+        &nbsp;
+        <Link href="/twitter">
+          <a>#IT-KINGDOM</a>
+        </Link>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
