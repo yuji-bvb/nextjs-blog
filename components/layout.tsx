@@ -42,11 +42,13 @@ export default function Layout({
         </div>
         {home ? (
           <>
-            <img
-              src="/images/profile.jpg"
-              className={`${styles.headerHomeImage} ${utilStyles.borderCircle}`}
-              alt={name}
-            />
+            <Link href="/card">
+              <img
+                src="/images/yugi.png"
+                className={`${styles.headerHomeImage}`}
+                alt={name}
+              />
+            </Link>
             <h1 className={utilStyles.heading2Xl}>{name}</h1>
           </>
         ) : (
