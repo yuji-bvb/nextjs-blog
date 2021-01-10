@@ -15,9 +15,11 @@
 }
 
 .headingLg {
-  font-size: 1.5rem;
+  font-size: 2rem;
   line-height: 1.4;
   margin: 1rem 0;
+  border-bottom: solid 0.5px;
+  border-color: "#00000045";
 }
 
 .headingMd {
@@ -26,6 +28,9 @@
 }
 .headingMd > a {
   font-weight: bold;
+}
+.headingMd:first-child {
+  border-bottom: solid;
 }
 
 .borderCircle {
