@@ -37,7 +37,7 @@ export default function Home({ allPostsData }: Props) {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={"https://favoroadbike.com/"}
+          href={"https://favoroadbike.com"}
         >
           ポートフォリオ
         </a>
@@ -49,6 +49,13 @@ export default function Home({ allPostsData }: Props) {
         <Link href="/twitter">
           <a>#IT-KINGDOM</a>
         </Link>
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href={"https://covid-dashboard-api-aa259.web.app"}
+        >
+          Covid19
+        </a>
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
