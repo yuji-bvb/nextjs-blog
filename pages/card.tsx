@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Blog({ card }) {
   const url = card.card_images[0];
-  const imgsrc = url.image_url;
+  const imgsrc = url.image_url_small;
   return (
     <>
       <Head>
