@@ -1,7 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
 import { getRandomCardData } from "../lib/card";
-import { useState } from "react";
 
 export default function Blog({ card }) {
   const url = card.card_images[0];

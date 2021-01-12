@@ -49,6 +49,7 @@ export default function Home({ allPostsData }: Props) {
         <Link href="/twitter">
           <a>#IT-KINGDOM</a>
         </Link>
+        &nbsp;
         <a
           target="_blank"
           rel="noopener noreferrer"
@@ -59,6 +60,7 @@ export default function Home({ allPostsData }: Props) {
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
+        <hr />
         <ul className={utilStyles.list}>
           {allPostsData.map(({ id, date, title }) => (
             <li className={utilStyles.listItem} key={id}>
