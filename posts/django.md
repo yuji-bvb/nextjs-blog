@@ -1,5 +1,5 @@
 ---
-title: "django-restframework"
+title: "django"
 date: "2020-12-22"
 ---
 

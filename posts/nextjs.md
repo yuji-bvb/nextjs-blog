@@ -1,11 +1,11 @@
 ---
-title: "Next.js(SSG,ISR,Tailwind CSS)"
+title: "Next.js"
 date: "2021-01-05"
 ---
 
 ---
 
-# Next.js 周りについて
+# SSG,ISR,Tailwind CSS
 
 - SSG:静的なページ
   - ex)Document,Help,Contact
