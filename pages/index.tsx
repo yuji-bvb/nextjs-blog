@@ -41,10 +41,7 @@ export default function Home({ allPostsData }: Props) {
           property="og:description"
           content="Next.js製のブログです。自分のポートフォリオも見られます。"
         />
-        <meta
-          property="og:image"
-          content="https://nextjs-blog-mauve-xi.vercel.app/twitCard.png/"
-        />
+        <meta property="og:image" content="/twitCard.png/" />
       </Head>
       <Header />
       <section className={utilStyles.headingMd}>

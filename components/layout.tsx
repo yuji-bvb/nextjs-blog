@@ -18,21 +18,6 @@ export default function Layout({
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
-        <meta name="twitter:site" content="@AtCK1a3CKuvR0f1" />
-        <meta name="twitter:creator" content="@AtCK1a3CKuvR0f1" />
-        <meta
-          property="og:url"
-          content="https://nextjs-blog-mauve-xi.vercel.app/"
-        />
-        <meta property="og:title" content="Yuji's Blog" />
-        <meta
-          property="og:description"
-          content="Next.js製のブログです。自分のポートフォリオも見られます。"
-        />
-        <meta
-          property="og:image"
-          content="https://nextjs-blog-mauve-xi.vercel.app/twitCard.png/"
-        />
       </Head>
       <header className={styles.header}>
         <div>
