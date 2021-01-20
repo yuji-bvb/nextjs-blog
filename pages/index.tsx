@@ -1,35 +1,50 @@
-import { GetStaticProps } from "next";
-import Head from "next/head";
-import Layout, { siteTitle } from "../components/layout";
-import utilStyles from "../styles/utils.module.css";
-import { getSortedPostsData } from "../lib/posts";
-import Link from "next/link";
-import Date from "../components/date";
-import { Header } from "../components/header";
-import { Footer } from "../components/footer";
+import { GetStaticProps } from 'next'
+import Head from 'next/head'
+import Layout, { siteTitle } from '../components/layout'
+import utilStyles from '../styles/utils.module.css'
+import { getSortedPostsData } from '../lib/posts'
+import Link from 'next/link'
+import Date from '../components/date'
+import { Header } from '../components/header'
+import { Footer } from '../components/footer'
 
 export const getStaticProps: GetStaticProps = async () => {
-  const allPostsData = getSortedPostsData();
+  const allPostsData = getSortedPostsData()
   return {
     props: {
       allPostsData,
     },
-  };
-};
+  }
+}
 
 type Props = {
   allPostsData: {
-    id: string;
-    title: string;
-    date: string;
-  }[];
-};
+    id: string
+    title: string
+    date: string
+  }[]
+}
 
 export default function Home({ allPostsData }: Props) {
   return (
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
+        <meta name="twitter:site" content="@AtCK1a3CKuvR0f1" />
+        <meta name="twitter:creator" content="@AtCK1a3CKuvR0f1" />
+        <meta
+          property="og:url"
+          content="https://nextjs-blog-mauve-xi.vercel.app/"
+        />
+        <meta property="og:title" content="Yuji's Blog" />
+        <meta
+          property="og:description"
+          content="Next.js製のブログです。自分のポートフォリオも見られます。"
+        />
+        <meta
+          property="og:image"
+          content="https://nextjs-blog-mauve-xi.vercel.app/twitCard.png/"
+        />
       </Head>
       <Header />
       <section className={utilStyles.headingMd}>
@@ -37,23 +52,23 @@ export default function Home({ allPostsData }: Props) {
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={"https://favoroadbike.com"}
+          href={'https://favoroadbike.com'}
         >
           ポートフォリオ
         </a>
         &nbsp;
-        <a rel="noopener noreferrer" href={"https://github.com/yuji-bvb"}>
+        <a rel="noopener noreferrer" href={'https://github.com/yuji-bvb'}>
           GitHub
         </a>
         &nbsp;
         <Link href="/twitter">
-          <a>#IT-KINGDOM</a>
+          <a data-testid="twitter-nav">#IT-KINGDOM</a>
         </Link>
         &nbsp;
         <a
           target="_blank"
           rel="noopener noreferrer"
-          href={"https://covid-dashboard-api-aa259.web.app"}
+          href={'https://covid-dashboard-api-aa259.web.app'}
         >
           Covid19
         </a>
@@ -77,5 +92,5 @@ export default function Home({ allPostsData }: Props) {
       </section>
       <Footer />
     </Layout>
-  );
+  )
 }
