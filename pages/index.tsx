@@ -30,8 +30,13 @@ export default function Home({ allPostsData }: Props) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        <meta name="twitter:site" content="@AtCK1a3CKuvR0f1" />
-        <meta name="twitter:creator" content="@AtCK1a3CKuvR0f1" />
+        {/* <meta name="twitter:site" content="@AtCK1a3CKuvR0f1" />
+        <meta name="twitter:creator" content="@AtCK1a3CKuvR0f1" /> */}
+        <meta
+          property="og:image"
+          key="ogImage"
+          content="https://nextjs-blog-mauve-xi.vercel.app/ogp/twitCard.jpg"
+        />
         <meta
           property="og:url"
           content="https://nextjs-blog-mauve-xi.vercel.app/"
@@ -41,7 +46,10 @@ export default function Home({ allPostsData }: Props) {
           property="og:description"
           content="Next.js製のブログです。自分のポートフォリオも見られます。"
         />
-        <meta property="og:image" content="/twitCard.png/" />
+        <meta
+          property="og:image"
+          content="https://nextjs-blog-mauve-xi.vercel.app/ogp/twitCard.jpg"
+        />
       </Head>
       <Header />
       <section className={utilStyles.headingMd}>
