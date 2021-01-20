@@ -30,24 +30,16 @@ export default function Home({ allPostsData }: Props) {
     <Layout home>
       <Head>
         <title>{siteTitle}</title>
-        {/* <meta name="twitter:site" content="@AtCK1a3CKuvR0f1" />
-        <meta name="twitter:creator" content="@AtCK1a3CKuvR0f1" /> */}
-        {/* <meta
-          property="og:image"
-          key="ogImage"
-          content="https://nextjs-blog-mauve-xi.vercel.app/ogp/twitCard.jpg"
-        /> */}
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:creator" content="@SarahMaslinNir" />
+        <meta name="twitter:title" content="Yuji's Blog" />
         <meta
-          property="og:url"
-          content="https://nextjs-blog-mauve-xi.vercel.app/"
-        />
-        <meta property="og:title" content="Yuji's Blog" />
-        <meta
-          property="og:description"
+          name="twitter:description"
           content="Next.js製のブログです。自分のポートフォリオも見られます。"
         />
         <meta
-          property="og:image"
+          name="twitter:image"
           content="https://nextjs-blog-mauve-xi.vercel.app/ogp/twitCard.jpg"
         />
       </Head>
