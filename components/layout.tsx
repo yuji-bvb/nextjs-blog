@@ -6,13 +6,13 @@ import { useTheme } from 'next-themes'
 
 const name = 'YUJI'
 export const siteTitle = "Yuji's Website"
-export default function Layout({
+const Layout = ({
   children,
   home,
 }: {
   children: React.ReactNode
   home?: boolean
-}) {
+}) => {
   const { theme, setTheme } = useTheme()
   return (
     <div className={styles.container}>
@@ -64,3 +64,4 @@ export default function Layout({
     </div>
   )
 }
+export default Layout
