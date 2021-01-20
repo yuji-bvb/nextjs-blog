@@ -51,7 +51,7 @@ const Home = ({ allPostsData }: Props) => {
           rel="noopener noreferrer"
           href={'https://favoroadbike.com'}
         >
-          ポートフォリオ
+          ートフォリオ
         </a>
         &nbsp;
         <a rel="noopener noreferrer" href={'https://github.com/yuji-bvb'}>
