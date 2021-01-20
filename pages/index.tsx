@@ -32,11 +32,11 @@ export default function Home({ allPostsData }: Props) {
         <title>{siteTitle}</title>
         {/* <meta name="twitter:site" content="@AtCK1a3CKuvR0f1" />
         <meta name="twitter:creator" content="@AtCK1a3CKuvR0f1" /> */}
-        <meta
+        {/* <meta
           property="og:image"
           key="ogImage"
           content="https://nextjs-blog-mauve-xi.vercel.app/ogp/twitCard.jpg"
-        />
+        /> */}
         <meta
           property="og:url"
           content="https://nextjs-blog-mauve-xi.vercel.app/"
