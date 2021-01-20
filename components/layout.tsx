@@ -1,19 +1,19 @@
-import Head from "next/head";
-import styles from "./layout.module.css";
-import utilStyles from "../styles/utils.module.css";
-import Link from "next/link";
-import { useTheme } from "next-themes";
+import Head from 'next/head'
+import styles from './layout.module.css'
+import utilStyles from '../styles/utils.module.css'
+import Link from 'next/link'
+import { useTheme } from 'next-themes'
 
-const name = "YUJI";
-export const siteTitle = "Yuji's Website";
+const name = 'YUJI'
+export const siteTitle = "Yuji's Website"
 export default function Layout({
   children,
   home,
 }: {
-  children: React.ReactNode;
-  home?: boolean;
+  children: React.ReactNode
+  home?: boolean
 }) {
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme()
   return (
     <div className={styles.container}>
       <Head>
@@ -44,12 +44,12 @@ export default function Layout({
           <>
             <Link href="/card">
               <img
+                data-testid="card-nav"
                 src="/images/yugi.png"
                 className={`${styles.headerHomeImage}`}
                 alt={name}
               />
             </Link>
-            {/* <h1 className={utilStyles.heading2Xl}>{name}</h1> */}
           </>
         ) : (
           <>
@@ -69,10 +69,10 @@ export default function Layout({
       {!home && (
         <div className={styles.backToHome}>
           <Link href="/">
-            <a>← Back to home</a>
+            <a data-testid="back-index">← Back to home</a>
           </Link>
         </div>
       )}
     </div>
-  );
+  )
 }
