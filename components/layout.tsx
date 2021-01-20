@@ -18,18 +18,21 @@ export default function Layout({
     <div className={styles.container}>
       <Head>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="twitter:site" content="@AtCK1a3CKuvR0f1" />
+        <meta name="twitter:creator" content="@AtCK1a3CKuvR0f1" />
         <meta
-          name="description"
-          content="Learn how to build a personal website using Next.js"
+          property="og:url"
+          content="https://nextjs-blog-mauve-xi.vercel.app/"
+        />
+        <meta property="og:title" content="Yuji's Blog" />
+        <meta
+          property="og:description"
+          content="Next.js製のブログです。自分のポートフォリオも見られます。"
         />
         <meta
           property="og:image"
-          content={`https://og-image.now.sh/${encodeURI(
-            siteTitle
-          )}.png?theme=light&md=0&fontSize=75px&images=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Ffront%2Fassets%2Fdesign%2Fnextjs-black-logo.svg`}
+          content="https://nextjs-blog-mauve-xi.vercel.app/twitCard.png/"
         />
-        <meta name="og:title" content={siteTitle} />
-        <meta name="twitter:card" content="summary_large_image" />
       </Head>
       <header className={styles.header}>
         <div>
