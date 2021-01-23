@@ -15,7 +15,16 @@ const Blog = ({ card }) => {
         <div></div>
         <div>
           {card && (
-            <img style={{ margin: '0 auto 10px' }} src={imgsrc} alt="Loading" />
+            <img
+              style={{
+                margin: '0 auto 10px',
+                width: '150px',
+                height: '200px',
+                border: 'solid',
+              }}
+              src={imgsrc}
+              alt="Loading"
+            />
           )}
         </div>
         <Link href="/">
