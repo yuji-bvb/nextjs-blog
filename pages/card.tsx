@@ -18,9 +18,10 @@ const Blog = ({ card }) => {
             <img
               style={{
                 margin: '0 auto 10px',
-                width: '150px',
-                height: '200px',
+                width: '250px',
+                height: '350px',
                 border: 'solid',
+                borderWidth: 'thin',
               }}
               src={imgsrc}
               alt="Loading"
