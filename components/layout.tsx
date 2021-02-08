@@ -31,24 +31,24 @@ const Layout = ({
         {home ? (
           <>
             <Link href="/card">
-              <img
-                data-testid="card-nav"
-                src="/images/yugi.png"
-                className={`${styles.headerHomeImage}`}
-                alt={name}
-              />
+              <div className={styles.superellipse}>
+                <img
+                  data-testid="card-nav"
+                  src="/images/yugi.png"
+                  className={`${styles.headerHomeImage}`}
+                  alt={name}
+                />
+              </div>
             </Link>
           </>
         ) : (
           <>
             <Link href="/">
-              <a>
-                <img
-                  src="/images/profile.jpg"
-                  className={`${styles.headerImage} ${utilStyles.borderCircle}`}
-                  alt={name}
-                />
-              </a>
+              <img
+                src="/images/profile.jpg"
+                className={`${styles.headerImage} ${utilStyles.borderCircle}`}
+                alt={name}
+              />
             </Link>
           </>
         )}

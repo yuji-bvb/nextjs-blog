@@ -17,10 +17,48 @@
 
 .headerHomeImage {
   cursor: pointer;
-  width: 7rem;
-  height: 9rem;
+  width: 6rem;
+  height: 8rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .backToHome {
   margin: 3rem 0 0;
+}
+
+.superellipse {
+  cursor: pointer;
+  width: 200px;
+  height: 200px;
+  position: relative;
+  border-radius: 20%;
+  background-color: #f9f9f9;
+}
+
+.superellipse::before,
+.superellipse::after {
+  content: '';
+  position: absolute;
+  z-index: -1;
+  background-color: #f9f9f9;
+}
+‍ .superellipse::before {
+  border-radius: 2%/30%;
+  background-color: #f9f9f9;
+  top: 33px;
+  bottom: 33px;
+  right: -2px;
+  left: -2px;
+}
+
+.superellipse::after {
+  border-radius: 30%/2%;
+  background-color: #f9f9f9;
+  left: 33px;
+  right: 33px;
+  top: -2px;
+  bottom: -2px;
 }
