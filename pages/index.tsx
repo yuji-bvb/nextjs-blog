@@ -7,6 +7,7 @@ import Link from 'next/link'
 import Date from '../components/date'
 import Header from '../components/header'
 import Footer from '../components/footer'
+import Loading from '../components/loading'
 
 export const getStaticProps: GetStaticProps = async () => {
   const allPostsData = getSortedPostsData()
@@ -45,22 +46,16 @@ const Home = ({ allPostsData }: Props) => {
       </Head>
       <Header />
       <section className={utilStyles.headingMd}>
-        <p>プログラミング学習中！Next.js頑張ってます！</p>
+        {/* <p>プログラミング学習中！Next.js頑張ってます！</p> */}
+        <span>ポートフォリオ</span>
+        <br />
         <a
           target="_blank"
           rel="noopener noreferrer"
           href={'https://favoroadbike.com'}
         >
-          ポートフォリオ
+          ロードバイク
         </a>
-        &nbsp;
-        <a rel="noopener noreferrer" href={'https://github.com/yuji-bvb'}>
-          GitHub
-        </a>
-        &nbsp;
-        <Link href="/twitter">
-          <a data-testid="twitter-nav">#IT-KINGDOM</a>
-        </Link>
         &nbsp;
         <a
           target="_blank"
@@ -69,6 +64,14 @@ const Home = ({ allPostsData }: Props) => {
         >
           Covid19
         </a>
+        &nbsp;
+        <a rel="noopener noreferrer" href={'https://github.com/yuji-bvb'}>
+          GitHub
+        </a>
+        <br />
+        <span>SSR</span>
+        <br />
+        <Loading />
       </section>
       <section className={`${utilStyles.headingMd} ${utilStyles.padding1px}`}>
         <h2 className={utilStyles.headingLg}>Blog</h2>
