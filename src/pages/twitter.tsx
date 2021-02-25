@@ -9,6 +9,7 @@ export async function getStaticProps() {
   console.log(twit)
   return {
     props: { twit },
+    revalidate: 5,
   }
 }
 

@@ -18,6 +18,7 @@ export async function getStaticProps() {
   const card = await getRandomCardData()
   return {
     props: { card },
+    revalidate: 5,
   }
 }
 
